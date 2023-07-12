@@ -9,11 +9,11 @@ import org.springframework.data.redis.cache.RedisCacheWriter;
 
 
 @Slf4j
-public class EngageCacheManager extends RedisCacheManager {
+public class CustomCacheManager extends RedisCacheManager {
 
     public static final String SUPER_ADMIN_TENANT = "SUPER_ADMIN_TENANT";
 
-    public EngageCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {
+    public CustomCacheManager(RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {
         super(cacheWriter, defaultCacheConfiguration);
         RedisCacheManager.builder()
                 .cacheWriter(cacheWriter)

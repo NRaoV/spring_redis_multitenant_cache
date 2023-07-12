@@ -101,7 +101,7 @@ public class RedisConfig {
 						.fromSerializer(new GenericJackson2JsonRedisSerializer()));
 		/*RedisCacheManager redisCacheManager = RedisCacheManager.builder(factory).cacheDefaults(redisCacheConfiguration)
 				.build();*/
-		RedisCacheManager redisCacheManager = new EngageCacheManager(redisCacheWriter(), redisCacheConfiguration);
+		RedisCacheManager redisCacheManager = new CustomCacheManager(redisCacheWriter(), redisCacheConfiguration);
 		return redisCacheManager;
 	}
 
